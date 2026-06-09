@@ -13,7 +13,7 @@ jobs:
         - name: test-phase
           run: echo "It is in a testing stage"
   deploy:
-       runs-on: deploy-phase
+       runs-on: ubuntu-slim
        needs: test
        steps: 
          - name: deploy-stage
