@@ -1,19 +1,11 @@
 name: Hello World
-on: 
-  push:
-    branches:
-      - main
-      - develop
-      - 'release/**'
-  pull_request:
-      branches:
-        - main
+on: push
 jobs:
   build:
     runs-on: ubuntu-slim
     steps:
       - name: build step
-        run: echo "hi, welcome"
+        run: echo "hi, welcome ${{ vars.my_name }}"
 
   
 
