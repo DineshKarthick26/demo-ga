@@ -5,5 +5,9 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Hello step
-        run: echo "Heyy, This is me"
+        run: |
+          echo "hello there!"
+          echo "welcome to Hello world"
+
+        
 
