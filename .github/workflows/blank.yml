@@ -4,10 +4,22 @@ jobs:
   build:
     runs-on: ubuntu-slim
     steps:
-      - name: Hello step
-        run: |
-          echo "hello there!"
-          echo "welcome to Hello world"
+      - name: build step
+        run: echo "hi, welcome"
+  test:
+      runs-on: ubuntu-slim
+      needs: build
+      steps:
+        - name: test-phase
+          run: echo "It is in a testing stage"
+  deploy:
+       runs-on: deploy-phase
+       needs: test
+       steps: 
+         - name: deploy-stage
+           run: "Please wait till deployment"
+    
+  
 
         
 
