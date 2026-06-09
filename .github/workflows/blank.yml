@@ -1,6 +1,5 @@
 name: Hello World
-on: push
-jobs:
+on: 
   push:
     branches:
       - main
@@ -9,6 +8,7 @@ jobs:
   pull_request:
       branches:
         - main
+jobs:
   build:
     runs-on: ubuntu-slim
     steps:
