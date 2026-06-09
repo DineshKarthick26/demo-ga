@@ -1,11 +1,11 @@
 name: Action demo
 on: push
 jobs:
-  action:
+  action-demo:
     runs-on: ubuntu-slim
     steps:
       - name: checkout the code
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: print index.html file
         run: cat index.html
 
